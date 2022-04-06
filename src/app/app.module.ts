@@ -11,11 +11,13 @@ import { FooterComponent } from './Shared/footer/footer.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
     UserBegingPageComponent,
     FooterComponent,
+   
     
     
   ],
