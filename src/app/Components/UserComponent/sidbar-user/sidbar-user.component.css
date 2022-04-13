@@ -1,0 +1,11 @@
+.nav {
+    width: 250px;
+    height: 100vh;
+    position: static;
+    /* background-color: aqua; */
+    margin-left: -12px;
+}
+
+.fz {
+    font-size: 25px;
+}
