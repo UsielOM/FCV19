@@ -14,7 +14,7 @@ import { UserModule } from './Pages/user-beging-page/user.module';
   declarations: [
     AppComponent,
     FooterComponent,
-   
+      
  
    
     
