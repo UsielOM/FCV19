@@ -13,9 +13,6 @@ export class RegistroComponent implements OnInit {
   }
 
 
-
  
 }
-function redireccionar (){
-  location.href='user';
-}
+
