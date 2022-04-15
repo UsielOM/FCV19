@@ -3,7 +3,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomepagesComponent } from './Pages/homepages/homepages.component';
 
 const routes: Routes = [
-  {path: "**", component:HomepagesComponent}
+
+  {path:'home',
+loadChildren:() => import('./Pages/homepages/home.module').then(m => m.HomeModule)
+},
+{path: 'user',
+loadChildren:() => import('./Pages/user-beging-page/user.module').then(m => m.UserModule)
+},
+  {path: "**", redirectTo:'home'}
 ];
 
 @NgModule({

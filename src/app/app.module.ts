@@ -16,7 +16,7 @@ import { UserModule } from './Pages/user-beging-page/user.module';
     FooterComponent,
       
  
-   
+ 
     
     
   ],
@@ -28,7 +28,9 @@ import { UserModule } from './Pages/user-beging-page/user.module';
     AppRoutingModule,
 
   ],
-  providers: [],
+  providers: [
+    
+  ],
 
   bootstrap: [AppComponent]
 })
