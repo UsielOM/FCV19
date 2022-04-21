@@ -4,10 +4,10 @@ import { SidbarUserComponent } from 'src/app/Components/UserComponent/sidbar-use
 import { UserBegingPageComponent } from './user-beging-page.component';
 
 const routes: Routes = [
-{path: '', component:UserBegingPageComponent,
+{path: 'user/inicio', component:UserBegingPageComponent,
 
 children: [
-  {path: 'sidvar_user', component:SidbarUserComponent}
+  {path: '', component:SidbarUserComponent}
 ]}
 
 ];
