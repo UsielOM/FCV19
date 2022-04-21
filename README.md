@@ -1,6 +1,11 @@
 # FCV19
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.3.
+## Recomendaciones
+Cuando se descrague el repositorio se requiere ejecutar el comando npm i node para que descargue el node y junto con el cualquier extencion instala con npm que
+contenga el proyecto
+
+
 
 ## Development server
 
