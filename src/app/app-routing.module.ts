@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomepagesComponent } from './Pages/homepages/homepages.component';
 
 const routes: Routes = [
 
@@ -10,7 +9,7 @@ loadChildren:() => import('./Pages/homepages/home.module').then(m => m.HomeModul
 {path: 'user',
 loadChildren:() => import('./Pages/user-beging-page/user.module').then(m => m.UserModule)
 },
-  {path: "**", redirectTo:'home'}
+  // {path: '**', redirectTo:'home'}
 ];
 
 @NgModule({
