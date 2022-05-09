@@ -14,7 +14,48 @@ export class EncuestaBasicaService {
       pregunta: "En las ultimas 24/7 horas. ¿Le han practicado pruebas de laboratorio para diagnosticar COVID-19?",
       si: "Si",
       no: "No"
-    }
+    },
+    {
+      pregunta:"En las ultimas 24 horas, le han tomado estudio de los pulmones (radiografias, ultrasonidos, tomografia) ¿Los resultados son positivos a COVID-19?",
+      si:"Si",
+      no:"No"
+    },
+    {
+    
+      pregunta: "¿Tiene dificultad respiratoria?",
+      si: "Si",
+      no: "No"
+    },
+    {
+    
+      pregunta: "¿Tiene dolor o presion en el pecho?",
+      si: "Si",
+      no: "No"
+    },
+    {
+    
+      pregunta: "¿Tiene Confusion?",
+      si: "Si",
+      no: "No"
+    },
+    {
+    
+      pregunta: "¿Color azulado en labios o rostros?",
+      si: "Si",
+      no: "No"
+    },
+    {
+    
+      pregunta: "¿Tiene toz?",
+      si: "Si",
+      no: "No"
+    },
+    {
+    
+      pregunta: "¿Tiene fiebre?",
+      si: "Si",
+      no: "No"
+    },
   ]
   constructor() { }
 
