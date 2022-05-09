@@ -56,6 +56,57 @@ export class EncuestaBasicaService {
       si: "Si",
       no: "No"
     },
+
+    {
+    
+      pregunta: "¿Tiene dolor de cabeza?",
+      si: "Si",
+      no: "No"
+    },
+    {
+    
+      pregunta: "¿Tiene Cansancio?",
+      si: "Si",
+      no: "No"
+    },
+    {
+    
+      pregunta: "¿Escurrimiento nasal?",
+      si: "Si",
+      no: "No"
+    },
+    {
+    
+      pregunta: "¿Ojos rojos?",
+      si: "Si",
+      no: "No"
+    },
+
+    {
+    
+      pregunta: "¿Tiene dolor de garganta ?",
+      si: "Si",
+      no: "No"
+    },
+    {
+    
+      pregunta: "¿Tiene diarrea?",
+      si: "Si",
+      no: "No"
+    },
+    {
+    
+      pregunta: "¿Perdida de sabor?",
+      si: "Si",
+      no: "No"
+    },
+    {
+    
+      pregunta: "¿Perdida de ofalto?",
+      si: "Si",
+      no: "No"
+    },
+
   ]
   constructor() { }
 
