@@ -8,10 +8,10 @@ import { UserBegingPageComponent } from './user-beging-page.component';
 const routes: Routes = [
 {path: 'User', component:UserBegingPageComponent,
 children: [
- 
-  {path: 'perfil',component:PerfiluserComponent},
-  {path: 'encuesta', component:EncuestabasicaComponent},
   {path: '', component: SidbarUserComponent},
+  {path: 'perfil',component:PerfiluserComponent},
+  {path: 'encuesta', component:EncuestabasicaComponent}
+  
  
 ]}
 

@@ -6,13 +6,15 @@ import { HomeModule } from './Pages/homepages/home.module';
 import { FooterComponent } from './Shared/footer/footer.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { UserModule } from './Pages/user-beging-page/user.module';
+import { ErrorComponent } from './Shared/error/error.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    FooterComponent
+    FooterComponent,
+    ErrorComponent
   
 
       
