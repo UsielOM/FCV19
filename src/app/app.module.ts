@@ -9,12 +9,11 @@ import { UserModule } from './Pages/user-beging-page/user.module';
 import { ErrorComponent } from './Shared/error/error.component';
 
 
-
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
-    ErrorComponent
+    ErrorComponent,
   
 
       

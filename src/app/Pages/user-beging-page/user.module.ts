@@ -7,6 +7,7 @@ import { NavbarUserComponent } from 'src/app/Components/UserComponent/navbar-use
 import { SidbarUserComponent } from 'src/app/Components/UserComponent/sidbar-user/sidbar-user.component';
 import { PerfiluserComponent } from 'src/app/Components/UserComponent/perfiluser/perfiluser.component';
 import { EncuestabasicaComponent } from 'src/app/Components/UserComponent/encuestabasica/encuestabasica.component';
+import { SignosVitalesComponent } from 'src/app/Components/UserComponent/signos-vitales/signos-vitales.component';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { EncuestabasicaComponent } from 'src/app/Components/UserComponent/encues
     SidbarUserComponent,
     PerfiluserComponent,
     EncuestabasicaComponent,
+    SignosVitalesComponent,
     UserBegingPageComponent,
   ],
   imports: [
