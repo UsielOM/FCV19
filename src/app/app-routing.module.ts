@@ -6,7 +6,7 @@ const routes: Routes = [
   {path:'home',
 loadChildren:() => import('./Pages/homepages/home.module').then(m => m.HomeModule)
 },
-{path: 'user',
+{path: 'User',
 loadChildren:() => import('./Pages/user-beging-page/user.module').then(m => m.UserModule)
 },
   // {path: '**', redirectTo:'home'}

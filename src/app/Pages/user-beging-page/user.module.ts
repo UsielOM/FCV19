@@ -12,11 +12,12 @@ import { EncuestabasicaComponent } from 'src/app/Components/UserComponent/encues
 @NgModule({
   declarations: [
 
-    UserBegingPageComponent,
+    
     NavbarUserComponent,
     SidbarUserComponent,
     PerfiluserComponent,
-    EncuestabasicaComponent
+    EncuestabasicaComponent,
+    UserBegingPageComponent,
   ],
   imports: [
     CommonModule,

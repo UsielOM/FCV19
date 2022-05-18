@@ -6,11 +6,13 @@ import { SidbarUserComponent } from 'src/app/Components/UserComponent/sidbar-use
 import { UserBegingPageComponent } from './user-beging-page.component';
 
 const routes: Routes = [
-{path: 'user', component:UserBegingPageComponent,
+{path: 'User', component:UserBegingPageComponent,
 children: [
-  {path: 'inicio', component:SidbarUserComponent},
+ 
   {path: 'perfil',component:PerfiluserComponent},
-  {path: 'encuesta', component:EncuestabasicaComponent}
+  {path: 'encuesta', component:EncuestabasicaComponent},
+  {path: '', component: SidbarUserComponent},
+ 
 ]}
 
 ];
