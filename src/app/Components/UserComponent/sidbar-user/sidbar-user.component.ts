@@ -16,28 +16,17 @@ export class SidbarUserComponent implements OnInit {
    data$: Observable<Correo> ;
     conversion:any;
     prueba="";
-   contendor1 ="";
+
   constructor(private activateRoute: ActivatedRoute, private authService:AuthService) { 
    
   this.data$= authService.sharingObservable;
   this.conversion=  this.authService.sharingObservable;
   this.prueba=this.conversion.source._value.email;
-
-  if(this.contendor1 != this.prueba){
-    this.contendor1=this.prueba
-    this.authService.sharingObservableData={email: this.contendor1};
-    console.log("HOLA KEVIN")
-  }else{
-    this.prueba=this.contendor1
-    console.log("HOLA BOBESPONJA")
-  }
-    
   }
   
   ngOnInit(): void {
-  
-      console.log(this.contendor1);
-      this.authService.getUser(this.contendor1).subscribe(res =>{
+     
+      this.authService.getUser(this.prueba).subscribe(res =>{
       this.userInicio.push(res);
     })
 

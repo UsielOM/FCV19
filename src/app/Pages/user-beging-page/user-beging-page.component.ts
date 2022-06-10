@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { UserInicio } from '../../UserInicio';
-import { AuthService } from '../../service/auth.service';
+import { AuthService, Correo } from '../../service/auth.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-user-beging-page',
@@ -9,9 +10,11 @@ import { AuthService } from '../../service/auth.service';
   styleUrls: ['./user-beging-page.component.css']
 })
 export class UserBegingPageComponent implements OnInit {
-   bandera = true;
-   email ="";
-  constructor(private authService:AuthService) {}
+  data$: Observable<Correo>
+  constructor(private authService:AuthService) {
+    this.data$= authService.sharingObservable;
+    console.log(this.data$);
+  }
   ngOnInit(): void {
   //  this.authService.ward(this.email, this.bandera);
   }

@@ -1,6 +1,6 @@
 <div class="container ">
 
-    <div class="row justify-content-center fila-padre">
+    <div class="row justify-content-center fila-padre" *ngFor="let inicio of usuarioInicio">
         <div class="row align-items-center justify-content-center fila1">
             <div class="col-12  ">
                 <p>BANNER</p>
@@ -11,9 +11,9 @@
                 </div>
                 <div class="row  justify-content-start fila-datos">
                     <div class="col-3 columna-datos">
-                        <h2>NOMBRE:</h2>
-                        <P>Correo</P>
-                        <p>Telefono</p>
+                        <h2>{{inicio.FirstName}}</h2>
+                        <P>{{inicio.Email}}</P>
+                        <p>{{inicio.Phone}}</p>
 
                     </div>
                 </div>
