@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { UsuariosService } from '../../../service/usuarios.service';
+import { Register } from 'src/app/interface/register';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-registro',
@@ -7,8 +10,10 @@ import { Router } from '@angular/router';
   styleUrls: ['./registro.component.css']
 })
 export class RegistroComponent implements OnInit {
-
-  constructor(private router:Router) { }
+  
+  reg: Register = new Register();
+  
+  constructor(private router:Router, private usuarios:UsuariosService) { }
 
 
   pageUser(){
@@ -17,6 +22,13 @@ export class RegistroComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  createRegistro(): void
+{
+
+  this.usuarios.createRegistro(this.reg).subscribe(result =>{
+    this.reg = result;
+  })
+}
 
  
 }

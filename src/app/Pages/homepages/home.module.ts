@@ -5,6 +5,9 @@ import { HomeRoutingModule } from './home-routing.module';
 import { HomepagesComponent } from './homepages.component';
 import { LoginComponent } from 'src/app/Components/HomeComponent/login/login.component';
 import { RegistroComponent } from 'src/app/Components/HomeComponent/registro/registro.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
 
 
 @NgModule({
@@ -15,7 +18,10 @@ import { RegistroComponent } from 'src/app/Components/HomeComponent/registro/reg
   ],
   imports: [
     CommonModule,
-    HomeRoutingModule
+   
+    HomeRoutingModule,
+    FormsModule,
+    HttpClientModule
   ]
 })
 export class HomeModule { }
