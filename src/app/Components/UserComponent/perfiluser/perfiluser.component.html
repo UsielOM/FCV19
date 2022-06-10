@@ -11,9 +11,9 @@
                 </div>
                 <div class="row  justify-content-start fila-datos">
                     <div class="col-3 columna-datos">
-                        <h2>{{inicio.FirstName}}</h2>
-                        <P>{{inicio.Email}}</P>
-                        <p>{{inicio.Phone}}</p>
+                        <h2>{{inicio.FirstName}} {{inicio.LastName}}</h2>
+                        <P>Email: {{inicio.Email}}</P>
+                        <p>Telefono:{{inicio.Phone}}</p>
 
                     </div>
                 </div>
@@ -26,20 +26,20 @@
             <p style="text-align: center;">DATOS PERSONALES </p>
 
             <div class="col-6  columna-datos-personales">
-                <label for="Nombre">Nombre: Usiel Orihuela Monroy</label>
-                <p>Genero: Hombre</p>
-                <p>Edad: 22</p>
-                <p>Peso: 60kl</p>
-                <p>Altura: 1.70</p>
+                <label for="Nombre">Nombre: {{inicio.FirstName}} {{inicio.LastName}}</label>
+                <p>Genero: </p>
+                <p>Edad: </p>
+                <p>Peso: </p>
+                <p>Altura: </p>
                 <p>Enfermedades: </p>
 
             </div>
             <div class="col-6 columna-datos-personales">
-                <label for="Telefono">Telefono: +52 55 67 54 85 68</label>
-                <p>Correo: usiel@tese.edu.mx</p>
-                <p>Estado: Mexico</p>
-                <p>Nacionalidad: Mexicano</p>
-                <P>Dosis aplicadas: sputnik v</P>
+                <label for="Telefono">Telefono: +52 {{inicio.Phone}}</label>
+                <p>Correo: {{inicio.Email}}</p>
+                <p>Estado: </p>
+                <p>Nacionalidad: </p>
+                <P>Dosis aplicadas: </P>
 
             </div>
         </div>
