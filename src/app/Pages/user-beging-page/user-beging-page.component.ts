@@ -9,10 +9,11 @@ import { AuthService } from '../../service/auth.service';
   styleUrls: ['./user-beging-page.component.css']
 })
 export class UserBegingPageComponent implements OnInit {
- 
-  constructor() {}
+   bandera = true;
+   email ="";
+  constructor(private authService:AuthService) {}
   ngOnInit(): void {
-   
+  //  this.authService.ward(this.email, this.bandera);
   }
 
 }

@@ -1,7 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { User } from 'src/app/interface/user';
-import { AuthService } from '../../../service/auth.service';
+import { AuthService, Correo } from '../../../service/auth.service';
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
 
 
 @Component({
@@ -10,15 +11,20 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+   data$: Observable<Correo> ;
+  constructor(private authService:AuthService, private router: Router,  ) {
+    this.data$ = authService.sharingObservable;
+   }
 
-  constructor(private authService:AuthService, private router: Router) { }
 
    user: User = new User();
- 
+   bandera = false;
   errorMessage = "";
   ngOnInit(): void {
   }
-  login(email:string){
+  login(emailR:string){
+    this.authService.sharingObservableData={email: emailR};
+
     this.authService.login(this.user.Email, this.user.Password).subscribe(
       result => {
      if(typeof localStorage !== "undefined"){

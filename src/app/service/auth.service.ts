@@ -1,6 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Register } from '../interface/register';
 import { UserInicio } from '../UserInicio';
@@ -10,6 +10,18 @@ import { UserInicio } from '../UserInicio';
 })
 export class AuthService {
 
+  private sharingObservablePrivate: BehaviorSubject<Correo> = 
+   new BehaviorSubject<Correo>({email:""});
+
+   get sharingObservable(){
+    return this.sharingObservablePrivate.asObservable();
+   }
+   set sharingObservableData(email:Correo){
+    this.sharingObservablePrivate.next(email);
+   }
+   
+  emailD="";
+  userInicio:UserInicio [] = []
   constructor(private http:HttpClient) { }
 
   getHeaders():HttpHeaders{
@@ -30,9 +42,15 @@ export class AuthService {
     });
   }
 
-  getUser(email:string): Observable<UserInicio>{
+  getUser(email:string): Observable<any>{
    
-    return this.http.get<UserInicio>(environment.apiUrl + "/user/"+email,  {headers: this.getHeaders()});
+    return this.http.get<any>(environment.apiUrl + "/user/"+email,  {headers: this.getHeaders()});
     }
 
+
+
+}
+
+export interface Correo{
+  email:string
 }

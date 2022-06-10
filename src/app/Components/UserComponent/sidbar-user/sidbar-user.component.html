@@ -1,15 +1,15 @@
 <section>
     <div class="container-fluid ">
 
-        <div class="row">
+        <div class="row" *ngFor="let inicio of userInicio">
             <div class="col-2 bg-sidbar ">
 
                 <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-sidbar" style="width: 280px;">
                     <div class="text-center">
                         <img src="./../../../../assets/USER.jpg" alt="" width="138" height="138" class="rounded-circle me-2 ">
 
-                        <p class="text-dark">Nombre</p>
-                        <p class="text-dark">Correo</p>
+                        <p class="text-dark">Nombre {{inicio.FirstName}}</p>
+                        <p class="text-dark" id="pCorreo"> {{(data$ | async)?.email}}</p>
                     </div>
 
                     <hr>
