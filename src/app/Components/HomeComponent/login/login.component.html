@@ -14,21 +14,21 @@
             </h2>
             <!-- LOGIN -->
 
-            <form action="#">
+            <form (ngSubmit)="login()" #loginForm="ngForm">
                 <div class="mb-4">
                     <label for="email" class="form-label">Correo electronico</label>
-                    <input type="email" class="form-control" name="email">
+                    <input type="email" class="form-control" name="Email" id="Email" [(ngModel)]="user.Email">
                 </div>
                 <div class="mb-4">
                     <label for="password" class="form-label">Password</label>
-                    <input type="password" class="form-control" name="password">
+                    <input type="password" class="form-control" name="Password" id="Password" [(ngModel)]="user.Password">
                 </div>
                 <div class="mb-4">
                     <input type="checkbox" name="connected" class="form-check-input" id="">
                     <label for="connected" class="form-check-label">Mantenerme Conectado</label>
                 </div>
                 <div class="d-grid">
-                    <button type="button" (click)="login()" class="btn btn-primary">Iniciar Sesión</button>
+                    <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
                 </div>
                 <div class="my-3">
                     <span>No tienes cuenta? <a href="/registro"> Registrate</a> </span><br>
