@@ -8,7 +8,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { UserModule } from './Pages/user-beging-page/user.module';
 import { ErrorComponent } from './Shared/error/error.component';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { Interceptor } from './interface/intercerptos';
 
 
 @NgModule({
@@ -36,6 +37,10 @@ import { HttpClientModule } from '@angular/common/http';
 
   ],
   providers: [
+    {provide: HTTP_INTERCEPTORS,
+    useClass: Interceptor,
+    multi: true
+  }
 
     
   ],

@@ -23,17 +23,6 @@ export class AuthService {
   userInicio:UserInicio [] = []
   constructor(private http:HttpClient) { }
 
-  getHeaders():HttpHeaders{
-    let token: string;
-    if(typeof localStorage !== "undefined"){
-       
-    token = localStorage.token;
-    }
-    const headers:HttpHeaders = new HttpHeaders({
-     Authorization: token!
-    })
-    return headers;
-  }
 
   login(Email:string, Password:string):Observable<any>{
     return this.http.post<any>(environment.apiUrl + "/login", {
@@ -43,10 +32,18 @@ export class AuthService {
 
   getUser(email:string): Observable<any>{
    
-    return this.http.get<any>(environment.apiUrl + "/user/"+email,  {headers: this.getHeaders()});
+    return this.http.get<any>(environment.apiUrl + "/user/"+email);
     }
 
-
+  auth(): Observable<boolean>{
+    let token: any;
+    if(typeof localStorage !== "undefined"){
+      token = localStorage.token ? localStorage.token : "";
+    }
+    return this.http.post<boolean>(environment.apiUrl + "/user/auth", {
+      token
+    });
+  }
 
 }
 
