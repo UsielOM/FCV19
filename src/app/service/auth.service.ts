@@ -10,8 +10,7 @@ import { UserInicio } from '../UserInicio';
 })
 export class AuthService {
 
-  private sharingObservablePrivate: BehaviorSubject<Correo> = 
-   new BehaviorSubject<Correo>({email:""});
+  private sharingObservablePrivate: BehaviorSubject<Correo> = new BehaviorSubject<Correo>({email:""});
 
    get sharingObservable(){
     return this.sharingObservablePrivate.asObservable();
