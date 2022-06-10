@@ -8,6 +8,7 @@ import { SidbarUserComponent } from 'src/app/Components/UserComponent/sidbar-use
 import { PerfiluserComponent } from 'src/app/Components/UserComponent/perfiluser/perfiluser.component';
 import { EncuestabasicaComponent } from 'src/app/Components/UserComponent/encuestabasica/encuestabasica.component';
 import { SignosVitalesComponent } from 'src/app/Components/UserComponent/signos-vitales/signos-vitales.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -23,7 +24,9 @@ import { SignosVitalesComponent } from 'src/app/Components/UserComponent/signos-
   ],
   imports: [
     CommonModule,
-    UserRoutingModule
+    
+    UserRoutingModule,
+  
   ]
 })
 export class UserModule { }
