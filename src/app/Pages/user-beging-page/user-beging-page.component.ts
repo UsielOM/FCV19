@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { UserInicio } from '../../UserInicio';
+import { AuthService } from '../../service/auth.service';
 
 @Component({
   selector: 'app-user-beging-page',
@@ -6,9 +9,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user-beging-page.component.css']
 })
 export class UserBegingPageComponent implements OnInit {
-
+ 
   constructor() {}
   ngOnInit(): void {
+   
   }
 
 }

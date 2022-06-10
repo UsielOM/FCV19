@@ -15,7 +15,7 @@
             </h2>
             <!-- LOGIN -->
 
-            <form (ngSubmit)="login()" #loginForm="ngForm">
+            <form (ngSubmit)="login(user.Email)" #loginForm="ngForm">
                 <div class="mb-4">
                     <label for="email" class="form-label">Correo electronico</label>
                     <input type="email" class="form-control" name="Email" id="Email" [(ngModel)]="user.Email">

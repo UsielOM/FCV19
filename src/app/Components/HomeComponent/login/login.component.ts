@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { User } from 'src/app/interface/user';
 import { AuthService } from '../../../service/auth.service';
 import { Router } from '@angular/router';
-import { UserInicio } from '../../../UserInicio';
+
 
 @Component({
   selector: 'app-login',
@@ -13,18 +13,19 @@ export class LoginComponent implements OnInit {
 
   constructor(private authService:AuthService, private router: Router) { }
 
-  user: User = new User();
+   user: User = new User();
  
   errorMessage = "";
   ngOnInit(): void {
   }
-  login(){
+  login(email:string){
     this.authService.login(this.user.Email, this.user.Password).subscribe(
       result => {
      if(typeof localStorage !== "undefined"){
       localStorage.setItem("token", result.token);
      }
-     this.router.navigate(["/User"])
+    
+     this.router.navigate(["User"])
     },
     error =>{
       

@@ -9,10 +9,11 @@ import { UserInicio } from '../../../UserInicio';
   styleUrls: ['./sidbar-user.component.css']
 })
 export class SidbarUserComponent implements OnInit {
- 
+  userInicio: UserInicio [] = []; 
+  email="";
    
   
-  constructor() { }
+  constructor(private activateRoute: ActivatedRoute, private authService:AuthService) { }
 
   ngOnInit(): void {
   
