@@ -13,11 +13,14 @@ import { Interceptor } from './interface/intercerptos';
 import { DoctoraModule } from './Pages/doctora/doctora.module';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
-    ErrorComponent,
+    ErrorComponent
+   
+  
   
 
       
