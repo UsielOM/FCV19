@@ -1,0 +1,16 @@
+Codigo de indentificacion 
+Nombre 
+Apellidos 
+Especialidad 
+Numero de colegiado }
+(Titutlo)
+Foto
+
+
+
+Correo 
+Dirreccion 
+Telefono 
+Instituto donde estudio 
+
+
