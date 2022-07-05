@@ -10,6 +10,7 @@ import { ErrorComponent } from './Shared/error/error.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { Interceptor } from './interface/intercerptos';
+import { DoctoraModule } from './Pages/doctora/doctora.module';
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import { Interceptor } from './interface/intercerptos';
     HomeModule,
     FontAwesomeModule,
     UserModule,
+    DoctoraModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,

@@ -27,7 +27,7 @@ export class RegistroComponent implements OnInit {
 
   this.usuarios.createRegistro(this.reg).subscribe(result =>{
     this.reg = result;
-  })
+  });
 }
 
  
